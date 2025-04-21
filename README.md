@@ -1,5 +1,5 @@
 # Ex.4 FULL_ADDER_SUBTRACTOR
-# Date :17.10.2024
+# Date : 21.04.2025
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
 **AIM:**
@@ -88,9 +88,9 @@ assign bo=w2|w3;
 endmodule
 ```
 
-Developed by:  keerthika A 
+Developed by:  Bharath K
 
-RegisterNumber: 24900898
+RegisterNumber: 24900579
 
 
 **RTL Schematic**
