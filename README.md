@@ -1,20 +1,24 @@
-# Ex.4 FULL_ADDER_SUBTRACTOR
-# Date : 21.04.2025
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+*NAME:*
+Bharath K
 
-**AIM:**
+*REG NO:*
+24900579
+
+*EXPERIMENT NO 4:* IMPLEMENTATION OF FULL ADDER AND FULL SUBTRACTOR
+
+*AIM:*
 
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
-**Equipments Required:**
+*Equipments Required:*
 
 Hardware – PCs, Cyclone II , USB flasher
 
 Software – Quartus prime
 
-**Full Adder and Full Subtractor**
+*Full Adder and Full Subtractor*
 
-**Full Adder**
+*Full ADDER*
 
 Full adder is a digital circuit used to calculate the sum of three binary bits. It consists of three inputs and two outputs. Two of the input variables, denoted by A and B, represent the two significant bits to be added. The third input, Cin, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are sum and carry.
 
@@ -24,9 +28,9 @@ Carry = AB + ACin + BCin
 
 ![image](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/154305477/0f30ba51-5ffb-4198-845f-18e054f675e7)
 
-**Figure -1 FULL ADDER**
 
-**Full Subtractor**
+
+*Full SUBTRACTOR*
 
 A full subtractor is a combinational circuit that performs subtraction involving three bits, namely minuend, subtrahend, and borrow-in . It accepts three inputs: minuend, subtrahend and a borrow bit and it produces two outputs: difference and borrow.
 
@@ -36,79 +40,37 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**Truthtable**
+*TRUTH TABLE*
 
-![image](https://github.com/user-attachments/assets/f049b4e9-c2dc-4e53-ac87-2c905fd19241)
-![image](https://github.com/user-attachments/assets/9750b5d4-84a9-4ece-b3b6-754c4739e8ba)
+*FULL ADDER:*
 
-
-**Procedure**
-
-Write the detailed procedure here
-
-1. Write the code in Quartus software by creating a new project wizard.
-2. Run the program to get output.
-3. Then open RTL viewer and download that image.
-4. Open new file with University program VWF
-5. Set end timer and execute, then download the waveform.
+![image](https://github.com/user-attachments/assets/f4f4d096-4ee2-445f-88d2-7d96cecf1131)
 
 
 
-**Program:**
-```
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-//full adder
-module EXP_4(sum, cout, a, b, cin);
-output sum;
-output cout;
-input a;
-input b;
-input cin;
-//internal nets wire sl,cl,c2;
-//Instantiate logic gate primitives
-xor (sl,a,b);
-and(cl,a,b);
-xor(sum, sl, cin);
-and (c2, sl,cin);
-or (cout, c2,cl);
-endmodule
+*FULL SUBTRACTOR:*
 
-module EXP_4_2 (df, bo, a, b, bin);
-output df;
-output bo;
-input a;
-input b;
-input bin;
-wire w1,w2,w3;
-assign w1=a^b;
-assign w2=(~a&b);
-assign w3=(~w1&bin);
-assign df=w1^bin;
-assign bo=w2|w3;
-endmodule
-```
-
-Developed by:  Bharath K
-
-RegisterNumber: 24900579
-
-
-**RTL Schematic**
-
-![RTL view 4_1](https://github.com/user-attachments/assets/fb4727b2-acdf-44dd-8d60-f0eec552abd5)
-![RTL view 4_2](https://github.com/user-attachments/assets/699b5f22-de82-45ac-959c-46179c67fd07)
+![image](https://github.com/user-attachments/assets/2c53fa00-f0a4-43dc-929c-909ce1dedc8d)
 
 
 
-**Output Timing Waveform**
-
-![Waveform4_1](https://github.com/user-attachments/assets/7176b1f4-002c-4fbd-8cb7-96561c591e2f)
-![Waveform4_2](https://github.com/user-attachments/assets/26bcac15-4126-457f-8e28-713c9acb8052)
 
 
-**Result:**
+*PROGRAM:*
+
+![image](https://github.com/user-attachments/assets/7db5b3b5-9ffe-4941-9fc4-7c7fd5d07598)
+
+
+
+*RTL VIEWER:*
+
+![image](https://github.com/user-attachments/assets/6c99b400-6ded-46dd-99c1-ca0e96cfef1d)
+
+
+*OUTPUT TIMING WAVEFORM:*
+
+![image](https://github.com/user-attachments/assets/75b28e79-475a-4dcc-aa50-44db1ff942a7)
+
+*RESULT:*
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
-
-
-
